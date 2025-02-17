@@ -1,0 +1,382 @@
+/*01. Define the global colors*/
+/*02. Define the global Topography*/
+.red-hat-display-black {
+  font-family: "Red Hat Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+.red-hat-display-medium {
+  font-family: "Red Hat Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+body {
+  background: #fafafa;
+  padding-top: 3rem;
+}
+body header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body header .hero {
+  width: 100%;
+  display: flex;
+  gap: 5%;
+  flex-wrap: wrap;
+  padding-top: 4rem;
+}
+body header .hero .hero-img-left,
+body header .hero .hero-img-right {
+  order: 1;
+  width: 45%;
+  flex: 1;
+}
+body header .hero .hero-img-left img,
+body header .hero .hero-img-right img {
+  width: 100%;
+}
+body header .hero .hero-text {
+  flex-basis: 100%;
+  order: 2;
+  padding: 3rem 2rem 2rem 2rem;
+  text-align: center;
+}
+body header .hero .hero-text h1 {
+  font-family: "Red Hat Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 1.1;
+  color: hsl(240, 21%, 20%);
+}
+body header .hero .hero-text p {
+  font-family: "Red Hat Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.1;
+  line-height: 1.5;
+  color: hsl(240, 10%, 57%);
+  padding: 1.5em 0;
+  max-width: 28rem;
+  margin: 0 auto;
+}
+body header .hero .hero-text .hero-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+body header .hero .hero-text .hero-btn .download {
+  width: auto;
+  text-align: center;
+  font-family: "Red Hat Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #fafafa;
+  padding: 1rem 2.5rem;
+  border-radius: 1.8rem;
+  border: none;
+  background: hsl(192, 37%, 48%);
+}
+body header .hero .hero-text .hero-btn .download span {
+  color: hsl(192, 90%, 77%);
+}
+body header .hero .hero-text .hero-btn .query {
+  width: auto;
+  text-align: center;
+  font-family: "Red Hat Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #fafafa;
+  padding: 1rem 2.5rem;
+  border-radius: 1.8rem;
+  border: none;
+  background: hsl(280, 34%, 53%);
+}
+body .seperator {
+  position: relative;
+  z-index: 10;
+}
+body .seperator .vertical-line {
+  width: 1px;
+  height: 4rem;
+  background-color: hsl(240, 18%, 85%);
+  margin: 0 auto;
+}
+body .seperator .seperator-text {
+  background-color: #fafafa;
+  width: 3.5rem;
+  height: 3.5rem;
+  font-family: "Red Hat Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 auto;
+  color: hsl(240, 10%, 57%);
+  border: 1px solid hsl(240, 18%, 85%);
+  border-radius: 100%;
+  text-align: center;
+  line-height: 3.5rem;
+}
+body main {
+  padding: 0rem 2rem 4rem 2rem;
+}
+body main .image_containers {
+  padding: 4rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+body main .image_containers .image_container {
+  border-radius: 1rem;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+}
+body main .image_containers .image_container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body main .text_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main .text_container h4 {
+  font-family: "Red Hat Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1.1;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: hsl(192, 37%, 48%);
+}
+body main .text_container h2 {
+  font-family: "Red Hat Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 1.1;
+  padding: 1rem 0 2rem;
+  text-align: center;
+  color: hsl(240, 21%, 20%);
+}
+body main .text_container p {
+  font-family: "Red Hat Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.1;
+  line-height: 1.5;
+  text-align: center;
+  color: hsl(240, 10%, 57%);
+}
+body footer {
+  margin-top: -28px;
+  background-image: url("assets/mobile/image-footer.jpg");
+  position: relative;
+  z-index: 1;
+}
+body footer .footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 2rem;
+}
+body footer .footer-container h3 {
+  font-family: "Red Hat Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 1.1;
+  text-align: center;
+  color: #fafafa;
+  position: relative;
+  z-index: 4;
+}
+body footer .footer-container p {
+  font-family: "Red Hat Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.1;
+  line-height: 1.5;
+  color: #fafafa;
+  text-align: center;
+  padding: 1.5rem 0;
+  position: relative;
+  z-index: 4;
+}
+body footer .footer-container button {
+  width: auto;
+  text-align: center;
+  font-family: "Red Hat Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #fafafa;
+  padding: 1rem 2.5rem;
+  border-radius: 1.8rem;
+  border: none;
+  background: hsl(280, 34%, 53%);
+  position: relative;
+  z-index: 4;
+}
+body footer .footer-container button span {
+  color: hsl(268, 100%, 86%);
+}
+body footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(192, 37%, 48%, 0.8);
+  z-index: 2;
+  pointer-events: none;
+}
+@media (min-width: 1280px) {
+  body header .hero .hero-img-left,
+  body header .hero .hero-img-right {
+    order: 1;
+    width: 30%;
+    flex: 1;
+  }
+  body header .hero .hero-img-left img,
+  body header .hero .hero-img-right img {
+    width: 100%;
+  }
+  body header .hero .hero-text {
+    min-width: 28rem;
+    width: 43%;
+    flex-basis: auto;
+    order: 1;
+    padding-top: 0;
+  }
+  body header .hero .hero-text h1 {
+    font-size: 4rem;
+  }
+  body header .hero .hero-text p {
+    font-size: 1.125rem;
+  }
+  body header .hero .hero-text .hero-btn {
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: center;
+  }
+  body main {
+    padding: 0rem 5rem 4rem;
+  }
+  body main .image_containers {
+    padding: 4rem 5rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  body main .text_container {
+    max-width: 54rem;
+    margin: 0 auto;
+  }
+  body main .text_container h4 {
+    font-size: 1rem;
+  }
+  body main .text_container h2 {
+    font-size: 2.5rem;
+  }
+  body main .text_container p {
+    font-size: 1.125rem;
+  }
+  body footer {
+    background-image: url("assets/desktop/image-footer.jpg");
+  }
+  body footer .footer-container {
+    max-width: 70rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  body footer .footer-container h3 {
+    font-size: 2.5rem;
+    width: 30%;
+    text-align: left;
+  }
+  body footer .footer-container p {
+    font-size: 1.125rem;
+    width: 30%;
+    margin: 0 2rem;
+    text-align: left;
+  }
+}
+@media (max-width: 1280px) and (min-width: 768px) {
+  body header .hero .hero-text h1 {
+    font-size: 3rem;
+  }
+  body header .hero .hero-text .hero-btn {
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: center;
+  }
+  body main {
+    padding: 0rem 2rem 4rem;
+  }
+  body main .image_containers {
+    padding: 4rem 0.75rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  body main .text_container {
+    max-width: 32rem;
+    margin: 0 auto;
+  }
+  body main .text_container h4 {
+    font-size: 0.875rem;
+  }
+  body main .text_container h2 {
+    font-size: 2.25rem;
+  }
+  body main .text_container p {
+    font-size: 1rem;
+  }
+  body footer {
+    background-image: url("assets/tablet/image-footer.jpg");
+  }
+  body footer .footer-container {
+    max-width: 32rem;
+    margin: 0 auto;
+  }
+  body footer h3 {
+    font-size: 2.25rem;
+  }
+  body footer p {
+    font-size: 1rem;
+  }
+}
